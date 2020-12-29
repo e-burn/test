@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.16080402010050251" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="designControllers.StartWindowController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button fx:id="exitButton" layoutX="519.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#exit" text="Exit" />
+            <MenuButton layoutX="29.0" layoutY="15.0" mnemonicParsing="false" text="MenuButton">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </MenuButton>
+            <TextField fx:id="loginField" editable="false" layoutX="214.0" layoutY="13.0" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="220.0" prefWidth="598.0">
+         <children>
+            <ScrollBar layoutX="447.0" orientation="VERTICAL" prefHeight="330.0" prefWidth="18.0" />
+            <Button fx:id="addNewFilmButton" layoutX="479.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#addNewFilm" text="AddNewFilm" />
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>
