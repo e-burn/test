@@ -13,8 +13,7 @@ public class UserInfoController
     {
         //serialize userinfo
     }
-    public static UserInfo getUserInfoFromFile(File sourceFile)
-    {
+    public static UserInfo getUserInfoFromFile(File sourceFile) throws IOException {
         //deserialize userInfo
         UserInfo result = new UserInfo("userName");
         return result;

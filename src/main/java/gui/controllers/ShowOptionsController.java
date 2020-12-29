@@ -28,7 +28,7 @@ public class ShowOptionsController
                 {
                     //ShowChoosenListController.showChoosenList(list.getKey());
 
-                    list.getValue().showFilms();
+                   // list.getValue().showFilms();
                 }
             });
         }

@@ -24,7 +24,7 @@ public class SignUpController {
     private Personalization personalization = Personalization.getInstance();
 
     ObservableList<String> backgroundColors = FXCollections
-            .observableArrayList("lightblue", "darkblue");
+            .observableArrayList("lightblue", "lightgreen", "white", "lightgrey");
 
     @FXML
     private Button okSignUpButton;
@@ -53,13 +53,10 @@ public class SignUpController {
     void setNewColor(MouseEvent event) throws IOException {
         Parent newColorView = FXMLLoader.load(getClass().getClassLoader().getResource("signUp.fxml"));
 
-        if(backgroundColorBox.getValue() == "lightblue") {
-            newColorView.setStyle("-fx-background-color: lightblue;");
-            personalization.setBackgroundColor("-fx-background-color: lightblue;");
-        } else {
-            newColorView.setStyle("-fx-background-color: darkblue;");
-            personalization.setBackgroundColor("-fx-background-color: darkblue;");
-        }
+        String backgroundColor = backgroundColorBox.getValue().toString();
+        String style = "-fx-background-color: "+ backgroundColor+ ";";
+        newColorView.setStyle(style);
+        personalization.setBackgroundColor(style);
 
         Scene newColorViewScene = new Scene(newColorView);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -116,4 +113,3 @@ public class SignUpController {
     }
 
 }
-

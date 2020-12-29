@@ -28,8 +28,7 @@ public class LoginController extends Application implements IDataManagmentContro
         primaryStage.show();
     }
 
-    public UserInfo createUserInfo (String login)
-    {
+    public UserInfo createUserInfo (String login) throws IOException {
         UserInfo userInfo = new UserInfo(login);
         return userInfo;
     }

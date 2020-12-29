@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,8 +27,12 @@ public class ShowFilmLists
                 @Override
                 public void handle(ActionEvent event)
                 {
-                    ShowChoosenListController.showChoosenList(list.getKey());
-                    list.getValue().showFilms();
+                    try {
+                        ShowChoosenListController.showChoosenList(list.getKey());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    //list.getValue().showFilms();
                 }
             });
         }

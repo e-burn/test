@@ -9,23 +9,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <SplitPane dividerPositions="0.16080402010050251" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="designControllers.StartWindowController">
-  <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-         <children>
-            <Button fx:id="exitButton" layoutX="519.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#exit" text="Exit" />
-            <MenuButton layoutX="29.0" layoutY="15.0" mnemonicParsing="false" text="MenuButton">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-            </MenuButton>
-            <TextField fx:id="loginField" editable="false" layoutX="214.0" layoutY="13.0" />
-         </children></AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="220.0" prefWidth="598.0">
-         <children>
-            <ScrollBar layoutX="447.0" orientation="VERTICAL" prefHeight="330.0" prefWidth="18.0" />
-            <Button fx:id="addNewFilmButton" layoutX="479.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#addNewFilm" text="AddNewFilm" />
-         </children>
-      </AnchorPane>
-  </items>
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <Button fx:id="exitButton" layoutX="519.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#exit" text="Exit" />
+                <MenuButton layoutX="29.0" layoutY="15.0" mnemonicParsing="false" text="Меню">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Изменить логин" />
+                        <MenuItem mnemonicParsing="false" text="Изменить оформление" />
+                        <MenuItem mnemonicParsing="false" text="Все списки" />
+                    </items>
+                </MenuButton>
+                <TextField fx:id="loginField" editable="false" layoutX="214.0" layoutY="13.0" />
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="220.0" prefWidth="598.0">
+            <children>
+                <ScrollBar layoutX="447.0" orientation="VERTICAL" prefHeight="330.0" prefWidth="18.0" />
+                <Button fx:id="addNewFilmButton" layoutX="479.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#addNewFilm" text="Добавить фильм" />
+            <Button fx:id="showButton" layoutX="376.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#showFilms" text="Show" />
+            </children>
+        </AnchorPane>
+    </items>
 </SplitPane>

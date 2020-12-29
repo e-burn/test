@@ -8,10 +8,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class ListOfFilms  implements Serializable
 {
@@ -22,8 +24,9 @@ public class ListOfFilms  implements Serializable
 	{
 		this.listID = listID;
 		filmsInTheList = new FilmsArray();
+        films = new ArrayList<FilmButton>();
 	}
-	public void showFilms()//вероятно, эта функция должна принимать Stage, на которой должна отобразить список
+	public void showFilms(Stage stage)//вероятно, эта функция должна принимать Stage, на которой должна отобразить список
     {
         FlowPane container = new FlowPane();
         //отобразить список кнопок-фильмов
@@ -35,11 +38,10 @@ public class ListOfFilms  implements Serializable
                 //button.setPrefSize(350, 100);//нужный размер!
                 container.getChildren().add(film.getButton());
             }
+
             ScrollPane scrollPane = new ScrollPane();
             scrollPane.setContent(container);
             scrollPane.setPannable(true);
-            Stage stage = new Stage();
-            stage.setTitle(Consts.listsTitles.get(listID));
             Scene scene = new Scene(scrollPane, 550, 200);//нужный размер!
             stage.setScene(scene);
             stage.show();
@@ -48,7 +50,10 @@ public class ListOfFilms  implements Serializable
 
 	public void addFilm(String filmTitle)
 	{
-		Integer filmID = films.size();
+        Integer filmID = 0;
+	    if(null != films) {
+	        filmID = films.size();
+	    }
 		FilmButton newFilmButton = new FilmButton(filmID, filmTitle);
 		films.add(newFilmButton);
 	}

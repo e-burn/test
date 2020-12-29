@@ -6,15 +6,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
+<?import javafx.scene.control.Label?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="designControllers.SignUpController">
    <children>
       <Button fx:id="okSignUpButton" layoutX="385.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#checkUserInput" text="OK" />
       <Button fx:id="exitSignUpButton" layoutX="216.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#closeApp" text="Exit" />
-      <TextArea layoutX="57.0" layoutY="158.0" prefHeight="22.0" prefWidth="220.0" text="Придумайте никнейм" />
-      <TextArea layoutX="57.0" layoutY="77.0" prefHeight="31.0" prefWidth="130.0" text="Привет!!!" />
+      <Label layoutX="57.0" layoutY="158.0" prefHeight="22.0" prefWidth="220.0" text="Придумайте никнейм" />
+      <Label layoutX="57.0" layoutY="77.0" prefHeight="31.0" prefWidth="130.0" text="FILMS ASSISTANT" />
       <TextField fx:id="loginSignUpField" layoutX="312.0" layoutY="166.0" promptText="Login" text="login" />
       <ChoiceBox fx:id="backgroundColorBox" layoutX="498.0" layoutY="93.0" prefWidth="150.0" />
-      <TextArea layoutX="259.0" layoutY="84.0" prefHeight="21.0" prefWidth="200.0" text="Выберите цвет фона " />
-      <Button fx:id="setNewColorButton" layoutX="536.0" layoutY="166.0" mnemonicParsing="false" onMouseClicked="#setNewColor" text="Установка фона" />
+      <Label layoutX="259.0" layoutY="84.0" prefHeight="21.0" prefWidth="200.0" text="Выберите цвет фона " />
+      <Button fx:id="setNewColorButton" layoutX="536.0" layoutY="166.0" mnemonicParsing="false" onMouseClicked="#setNewColor" text="Приенить выбранный фон" />
    </children>
 </Pane>
